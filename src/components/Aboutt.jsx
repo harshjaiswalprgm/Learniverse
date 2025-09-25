@@ -118,9 +118,9 @@ export default function WellnessSection() {
               ))}
             </div>
             <div>
-              <span className="font-semibold text-xs sm:text-sm">350+</span>
+              <span className="font-semibold text-xs sm:text-sm">23000+</span>
               <p className="text-[10px] sm:text-xs text-gray-500">
-                Join our active healthy community
+                Join our Community
               </p>
             </div>
           </motion.div>
@@ -134,14 +134,12 @@ export default function WellnessSection() {
           viewport={{ once: true }}
           className="text-black"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-snug sm:leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Where Smiles Blossom <br /> Into Stories
+          <h2 className="text-2xl sm:text-3xl md:text-4xl p-9 lg:text-5xl font-extrabold leading-snug sm:leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+             Your Pathway to Real-World Skills and Career Success
           </h2>
           <p className="text-black mt-3 sm:mt-4 text-sm sm:text-base md:text-lg leading-relaxed">
-            Solace isn’t just a space to track your moods and progress, it’s a
-            place where your well-being takes center stage. Here you can express
-            yourself freely, track your journey, and witness those smiles blossom
-            into stories that empower and inspire you.
+           At TheLearniverse, we’re on a mission to help learners take the first step toward meaningful careers.
+Through our expert-led webinars and practical programs, we guide students and job seekers in both technical and non-technical fields to gain the skills, confidence, and knowledge they need to land internships and their first jobs.
           </p>
 
           <motion.button
@@ -156,14 +154,14 @@ export default function WellnessSection() {
           <div className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
             {[
               {
-                icon: "🔒",
-                title: "Confidentiality",
-                desc: "Your privacy is our priority. Discreet and secure space for your wellness journey.",
+                icon: "🎓",
+                title: " Career-Focused Webinars",
+                desc: "Live sessions designed to help you prepare for internships, interviews, and job opportunities.",
               },
               {
-                icon: "♿",
-                title: "Accessibility",
-                desc: "Designed for everyone, with features that make self-care easy and inclusive.",
+                icon: "🧠",
+                title: "Skill-Building Programs",
+                desc: "Practical learning paths to develop in-demand skills across tech and non-tech domains.",
               },
             ].map((item, i) => (
               <motion.div
@@ -194,8 +192,8 @@ export default function WellnessSection() {
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-center">
             {[
-              { icon: "👥", target: 10000, label: "Happy Users", color: "text-blue-600" },
-              { icon: "🧑‍⚕️", target: 50, label: "Wellness Coaches", color: "text-purple-600" },
+              { icon: "👥", target: 23080, label: "Happy Students", color: "text-blue-600" },
+              { icon: "🧑‍🏫", target: 50, label: "Wellness Mentors", color: "text-purple-600" },
               { icon: "📅", target: 100, label: "Weekly Sessions", color: "text-green-600" },
             ].map((stat, i) => (
               <motion.div

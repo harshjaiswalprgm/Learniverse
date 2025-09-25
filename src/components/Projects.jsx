@@ -7,43 +7,51 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
   {
     number: "001",
-    title: "Street Chronicles: The Art of Everyday Moments",
-    city: "Los Angeles, USA",
-    date: "17/07/24",
+    title: "MindCraft: AI Learning for Rural India",
+    city: "Uttar Pradesh, India",
+    date: "Feb 2025",
     image:
-      "https://img.freepik.com/free-photo/professional-programmer-working-late-dark-office_1098-18705.jpg?w=740",
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80",
   },
   {
     number: "002",
-    title: "Timeless Alleyways: Streets in Analog",
-    city: "New York, USA",
-    date: "10/06/24",
+    title: "Sakshm AI: Socratic Coding Tutor",
+    city: "Bengaluru, India",
+    date: "Mar 2025",
     image:
-      "https://img.freepik.com/free-photo/professional-programmer-working-late-dark-office_1098-18705.jpg?w=740",
+      "1.png",
   },
   {
     number: "003",
-    title: "Silent Stories: The Streets Through My Lens",
-    city: "London, UK",
-    date: "07/03/24",
+    title: "Aryabhata: JEE Math Reasoning Model",
+    city: "Delhi, India",
+    date: "Aug 2025",
     image:
-      "https://img.freepik.com/free-photo/professional-programmer-working-late-dark-office_1098-18705.jpg?w=740",
+      "2.png",
   },
   {
     number: "004",
-    title: "In the Frame: City Rhythms on Film",
-    city: "Milan, IT",
-    date: "—",
+    title: "Interval Learning Platform",
+    city: "Kerala, India",
+    date: "2025",
     image:
-      "https://img.freepik.com/free-photo/professional-programmer-working-late-dark-office_1098-18705.jpg?w=740",
+      "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=900&q=80",
   },
   {
     number: "005",
-    title: "Street Shadows: Light, Life, and Lenses",
-    city: "Warsaw, PL",
-    date: "23/12/24",
+    title: "Alice.Tech: AI for Exams",
+    city: "Copenhagen / Global",
+    date: "2025",
     image:
-      "https://img.freepik.com/free-photo/professional-programmer-working-late-dark-office_1098-18705.jpg?w=740",
+      "3.png",
+  },
+  {
+    number: "006",
+    title: "Cherrilearn Digital Learning in Kannada Schools",
+    city: "Mangaluru, Karnataka",
+    date: "2025",
+    image:
+      "5.png",
   },
 ];
 
@@ -53,7 +61,6 @@ export default function FeaturedProjects() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Animate title
       gsap.from(".featured-title", {
         opacity: 0,
         y: -40,
@@ -65,7 +72,6 @@ export default function FeaturedProjects() {
         },
       });
 
-      // Animate rows alternately left/right
       gsap.utils.toArray(".project-row").forEach((row, i) => {
         gsap.from(row, {
           opacity: 0,
@@ -90,21 +96,21 @@ export default function FeaturedProjects() {
       </h2>
 
       {/* Floating preview image */}
-      {hovered !== null && (
-        <div className="hidden md:flex absolute top-12 left-1/2 -translate-x-1/2 z-50">
+      <div className="hidden md:flex absolute top-0 right-0 h-full items-center pr-4 z-50 pointer-events-none">
+        {hovered !== null && (
           <div className="relative">
             <img
+              key={hovered}
               src={projects[hovered].image}
               alt={projects[hovered].title}
-              className="w-[450px] h-auto object-cover rounded-2xl shadow-2xl transform scale-95 opacity-0 animate-fadeIn"
+              className="w-[400px] h-auto object-cover rounded-2xl shadow-2xl transform scale-95 opacity-100 transition-all duration-500"
             />
-            {/* gradient glow */}
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-purple-500/30 via-pink-400/20 to-yellow-300/30 blur-3xl -z-10"></div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
-      {/* Desktop: Table layout */}
+      {/* Desktop table */}
       <div className="hidden md:block overflow-x-auto">
         <table className="w-full text-left relative">
           <thead>
@@ -142,7 +148,7 @@ export default function FeaturedProjects() {
         </table>
       </div>
 
-      {/* Mobile: Cards */}
+      {/* Mobile cards */}
       <div className="md:hidden grid gap-6">
         {projects.map((project, index) => (
           <div

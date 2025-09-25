@@ -98,7 +98,7 @@ export default function ProcessSection() {
   to="/meeting"
   className="flex items-center justify-center gap-2 bg-black text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:bg-gray-900 text-sm sm:text-base"
 >
-  Open App
+  Register Now
   <ArrowUpRight className="w-4 h-4" />
 </Link>
 

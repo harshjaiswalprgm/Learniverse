@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import axios from "axios";
 
@@ -35,13 +35,13 @@ function ScrollToTop() {
 
 // ✅ Homepage with sections for smooth scroll + API call example
 function HomePage() {
-  const [students, setStudents] = useState([]);
+
 
   useEffect(() => {
     // Fetch students from Django backend
     axios
       .get("http://127.0.0.1:8000/api/students/", { withCredentials: true }) // only if using cookies/auth
-      .then(res => setStudents(res.data))
+      // .then(res => setStudents(res.data))
       .catch(err => console.error("API Error:", err));
   }, []);
 
@@ -73,7 +73,7 @@ function HomePage() {
       </section>
 
       {/* ✅ Display fetched students */}
-      <section id="students" className="p-8 bg-gray-100">
+      {/* <section id="students" className="p-8 bg-gray-100">
         <h2 className="text-2xl font-bold mb-4">Students</h2>
         {students.length > 0 ? (
           <ul className="space-y-2">
@@ -86,7 +86,7 @@ function HomePage() {
         ) : (
           <p>No students found.</p>
         )}
-      </section>
+      </section> */}
     </>
   );
 }
